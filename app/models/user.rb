@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_many :books
   has_many :favorites, dependent: :destroy
+  has_many :book_comments, dependent: :destroy
   attachment :profile_image, destroy: false
 
   validates :name, presence: true, length: { in: 2..20 }, uniqueness: true
