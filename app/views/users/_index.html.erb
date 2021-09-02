@@ -1,5 +1,4 @@
-<table class='table'>
-  <thead>
+ <thead>
     <tr>
       <th>image</th>
       <th>name</th>
@@ -11,8 +10,9 @@
       <tr>
         <td><%= attachment_image_tag(user, :profile_image, :fill, 50, 50, fallback: "no-image-icon.jpg") %></td>
         <td><%= user.name %></td>
+        <td>フォロー数: <%= user.followings.count %></td>
+        <td>フォロワー数: <%= user.followers.count %></td>
         <td><%= link_to 'Show', user_path(user), class: "user_#{user.id}" %></td>
       </tr>
     <% end %>
   </tbody>
-</table>
