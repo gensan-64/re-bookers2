@@ -1,3 +1,3 @@
- $(".favorites").html("<%= j(render 'favorites/favorites', book: @book) %>");
- 
+$(".favorites").html("<%= j(render 'favorites/favorites', book: @book) %>");
+
 $(".favorites" + <%=@book.id %>).html("<%= j(render 'favorites/favorites', book: @book) %>");
